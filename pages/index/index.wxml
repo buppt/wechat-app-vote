@@ -1,0 +1,15 @@
+<!--index.wxml-->
+<view wx:for="{{items}}" wx:key="{{item.voteId}}"  class='container-vote'>
+  <view class="vote" data-id="{{item.voteId}}" bindtap="toVote">
+    <view class="vote-title">
+      <text class='title-first'>[投票]</text>
+      <text class='title-second'>{{item.voteTitle}}</text>
+    </view>
+    <view class='vote-intro'>{{item.voteIntro}}</view>
+    <view class='vote-footer'>
+      <text class='vote-number'>{{item.voteNumber}}人</text>
+      <text class='vote-time'>{{item.voteTime}}</text>
+      <text class='float-clear'></text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,35 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/create/create",
+    "pages/votePage/votePage"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "rgb(3,169,244)",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "投票小程序",
+    "backgroundColor": "rgb(247,247,250)"
+  },
+  "tabBar": {
+    "color": "rgb(129,212,249)",
+    "selectedColor": "#fff",
+    "backgroundColor": "rgb(3,169,244)",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "发件箱"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "收件箱"
+      },
+      {
+        "pagePath": "pages/create/create",
+        "text": "发起投票"
+      }
+    ],
+    "position": "top"
+  }
+}

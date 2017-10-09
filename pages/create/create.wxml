@@ -1,0 +1,14 @@
+<view class="container-create">
+  <view class='create'>
+    <input class='create-title' placeholder="投票标题" bindinput="voteTitle"></input>
+    <input class='create-intro' placeholder="补充内容(选填)" bindinput="voteIntro"></input>
+    <block wx:for="{{lists}}" wx:key="{{index}}">
+      <input class='create-li' data-id="{{index}}" placeholder="选项"  bindinput='bindKeyInput'></input>
+    </block> 
+    <button class='add-li' bindtap='addList'>添加选项</button>
+    <button class='add-li' bindtap='delList'>删除选项</button>
+  </view>
+</view>
+<view>
+  <button class='button-footer' bindtap='submit'>确定</button>
+</view>

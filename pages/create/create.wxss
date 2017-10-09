@@ -1,0 +1,40 @@
+.container-create{
+  background-color: rgb(247,247,250);
+  padding: 2% 3%;
+}
+
+.create{
+  background-color: #fff;
+  padding: 5%;
+}
+
+.create-title{
+  padding: 2px;
+  margin-bottom: 20px;
+  border-bottom: 1px #eeeeee solid; 
+  font-size: 20px;
+}
+
+.create-intro{
+  padding: 2px;
+  margin-bottom: 20px;  
+  border-bottom: 1px #eeeeee solid; 
+  font-size: 15px;
+}
+
+.create-li{
+  padding: 2px;
+  margin-bottom: 20px;  
+  border-bottom: 1px #eeeeee solid; 
+  font-size: 15px;
+}
+
+.add-li{
+  margin-bottom: 10px;
+}
+
+.button-footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}

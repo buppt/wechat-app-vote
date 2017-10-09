@@ -1,0 +1,16 @@
+<view class="container-page">
+  <view class='votePage'>
+    <view class='vote-title'>{{voteTitle}}</view>
+    <view class='vote-intro' >{{voteIntro}}</view>
+    <view class='vote-userNumber'>已有{{userNumber}}人参与</view>
+    <view wx:for="{{voteList}}" wx:key="{{index}}">
+      <view class='vote-li' bindtap="vote" data-id="{{index}}">
+        <view class='vote-index'>{{index}}</view>
+        <view class='vote-number'>{{item.voteNumber}}票{{item.precent}}</view>
+        <view class='vote-footer'></view>
+      </view>  
+    </view>
+    <view class='vote-user'>发起人{{voteUser}}</view>  
+  </view>
+</view>
+<button class='button-footer' open-type="share">分享到群里</button>
