@@ -6,4 +6,4 @@
 
 
 ### 项目截图
-<iframe src="GIF.gif">
+![git](GIF.gif)
