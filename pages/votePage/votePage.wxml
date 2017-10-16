@@ -1,16 +1,21 @@
-<view class="container-page">
-  <view class='votePage'>
-    <view class='vote-title'>{{voteTitle}}</view>
-    <view class='vote-intro' >{{voteIntro}}</view>
-    <view class='vote-userNumber'>已有{{userNumber}}人参与</view>
-    <view wx:for="{{voteList}}" wx:key="{{index}}">
-      <view class='vote-li' bindtap="vote" data-id="{{index}}">
-        <view class='vote-index'>{{index}}</view>
-        <view class='vote-number'>{{item.voteNumber}}票{{item.precent}}</view>
-        <view class='vote-footer'></view>
+<view class='vote-title'>{{voteTitle}}</view>
+<view class="top">
+  <view wx:for="{{voteWeek}}" wx:key="{{item}}" class="top-text">{{item}}</view>
+</view>
+<view class="left-container">
+  <view wx:for="{{[1,2,3,4,5,6,7,8]}}" wx:key="{{index}}">
+    <view class='left-row' style="background:{{index%2==0?'white':'lightgray'}};border-bottom:1rpx solid {{index==3?'red':'lightgray'}};">
+      <view class="left left-bg">
+        {{item}}
+      </view>
+      <view wx:for="{{['','','','','']}}" wx:for-item="time" class="left" wx:key="{{index}}">
+        <view class="{{myVote[item-1][index]==1?'vote-li':'vote-li3'}}"  bindtap="vote" data-id="{{[item-1,index]}}">
+        <view class='vote-number'>{{voteNum[item-1][index]}}票</view>
       </view>  
-    </view>
-    <view class='vote-user'>发起人{{voteUser}}</view>  
+      </view>
+    </view>  
   </view>
 </view>
+
+<button class='button-footer1' bindtap="voteConfirm"  >确定投票</button>
 <button class='button-footer' open-type="share">分享到群里</button>

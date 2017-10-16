@@ -11,26 +11,8 @@ Page({
   voteIntro: function(e){
     this.data.voteIntro = e.detail.value;
   },
-  bindKeyInput:function(e){
-    let id = e.currentTarget.dataset.id;
-    this.data.lists[id].index = id;
-    this.data.lists[id].value = e.detail.value;
-    console.log(id+"+");
-  },
-  addList: function(){
-    var  lists = this.data.lists;
-    var newData = {};
-    lists.push(newData);
-    this.setData({
-      lists: lists,
-    })  
-  },
-  delList: function () {
-    var lists = this.data.lists;
-    lists.pop();
-    this.setData({
-      lists: lists,
-    })
+  voteWeek: function (e) {
+    this.data.voteWeek = e.detail.value;
   },
   submit: function(e){
     wx.request({
@@ -38,7 +20,7 @@ Page({
       data: {
         voteTitle: this.data.voteTitle,
         voteIntro: this.data.voteIntro,
-        lists: this.data.lists,
+        voteWeek: this.data.voteWeek,
       },
       success: function(res) {
         toVote.toVote(res.data);

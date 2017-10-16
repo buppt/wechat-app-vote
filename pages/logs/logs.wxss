@@ -18,6 +18,7 @@
   font-size: 14px;
   height: 50px;
   padding-top: 5%; 
+  color: rgb(128,145,165);
 }
  .vote-footer{
   margin-bottom: 5px;
@@ -25,11 +26,13 @@
 .vote-number{
   float: left;
   font-size: 12px;
+  color: rgb(128,145,165);
 }
 
 .vote-time{
   float: right;
   font-size: 12px;
+  color: rgb(128,145,165);
 }
 
 .float-clear{

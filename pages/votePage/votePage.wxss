@@ -1,58 +1,63 @@
-.container-page{
-  background-color: rgb(247,247,250);
-  padding: 3%;
-}
-.votePage{
-  background-color: #fff;
-  padding: 5%;
-}
-
 .vote-title{
+  background-color: rgb(3,169,244);
   padding: 2px;
-  margin-bottom: 20px;
   font-size: 20px;
+  text-align: center;
+  color: #fff;
 }
-
-.vote-intro{
-  padding: 2px;
-  margin-bottom: 20px;  
-  font-size: 17px;
-}
-
-.vote-userNumber{
-  font-size: 12px;
-  text-align: right;
-  margin-bottom: 10px;
-}
-
 .vote-li{
-  border: 1px #000 solid;
-  margin-bottom: 20px;
-}
-
-.vote-index{
-  float:left;
-  padding: 2px;
-  font-size: 15px;
-}
-
-.vote-number{
-  float:right;
-  padding: 2px;
-  font-size: 15px;
+  padding: 10rpx;
+  border: 1px rgb(3,169,244) solid;
+  border-radius:20rpx;
+  background-color: rgb(3,169,244);
+  color: #fff;
 }
 
 .vote-footer{
   clear: both;
 }
 
-.vote-user{
-  text-align: right;
-  font-size: 12px;
-}
-
 .button-footer{
   position: fixed;
   bottom: 0;
   width: 100%;
+}
+
+.top {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(3,169,244);
+  color: #fff;
+}
+
+.top-text {
+  width: 16.66%;
+  height: 95rpx;
+  font-size: 9pt;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.left-container{
+  flex-direction: column;
+  width:750rpx;
+  display:flex;
+}
+.left-bg{
+  background-color: rgb(3,169,244);
+  color:#fff;
+}
+.left-row{
+  display: flex;
+  flex-direction: row;
+}
+.left {
+  width: 125rpx;
+  height: 100rpx;
+  font-size: 9pt;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  
 }

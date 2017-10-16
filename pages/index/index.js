@@ -14,6 +14,7 @@ Page({
       data: {
       },
       success: function (res) {
+        console.log(res.data.items);
         that.setData({
           items: res.data.items,
         });
@@ -56,7 +57,6 @@ Page({
   },
   toVote: function(event){
     toVote.toVote(event.currentTarget.dataset.id)
-    console.log(event.currentTarget.dataset.id);
   },
   
 })

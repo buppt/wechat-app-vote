@@ -1,6 +1,7 @@
 .container-create{
   background-color: rgb(247,247,250);
   padding: 2% 3%;
+
 }
 
 .create{
@@ -21,20 +22,20 @@
   border-bottom: 1px #eeeeee solid; 
   font-size: 15px;
 }
-
-.create-li{
-  padding: 2px;
-  margin-bottom: 20px;  
-  border-bottom: 1px #eeeeee solid; 
-  font-size: 15px;
+.create-week1{
+  float: left;
 }
-
-.add-li{
-  margin-bottom: 10px;
+.create-week{
+  text-align: center;
+  float: left;
+  width: 2em;
 }
-
+.create-footer{
+  clear: both;
+}
 .button-footer{
   position: fixed;
   bottom: 0;
   width: 100%;
+  background-color: #fff;
 }
