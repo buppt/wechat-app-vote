@@ -2,8 +2,9 @@
 ### 项目说明
 这是实验课的一个作业，做一个投票类微信小程序。
 
-只写了前端代码，数据都是通过wx.request从本地服务器php文件中直接获取的json字符串。
+我负责前端代码，数据都是通过wx.request从本地服务器php文件中直接获取的json字符串。
 
 
 ### 项目截图
-![git](GIF.gif)
+![gif1](img/GIF1.gif)
+![gif2](img/GIF2.gif)

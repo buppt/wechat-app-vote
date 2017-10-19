@@ -8,18 +8,6 @@ Page({
     hasUserInfo: false,
   },
   onLoad: function (option) {
-    var that = this;
-    wx.request({
-      url: 'http://localhost/wx/index.php', //仅为示例，并非真实的接口地址
-      data: {
-      },
-      success: function (res) {
-        console.log(res.data.items);
-        that.setData({
-          items: res.data.items,
-        });
-      }
-    });
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -46,6 +34,42 @@ Page({
         }
       })
     }
+  },
+  onShow: function(){
+    var that = this;
+    var open_id = wx.getStorageSync('open_id');
+    wx.request({
+      url: 'http://localhost/wx/index.php', //仅为示例，并非真实的接口地址
+      method: "POST",
+      data: {
+        open_id: open_id,
+      },
+      success: function (res) {
+        // console.log(res.data.items);
+        that.setData({
+          items: res.data.items,
+        });
+      }
+    });
+  },
+  launch: function () {
+    wx.showActionSheet({
+      itemList: ['按周次投票', '自主填写'],
+      success: function (res) {
+        if(res.tapIndex==0){
+          wx.navigateTo({
+            url: '../create/create'
+          })
+        }else{
+          wx.navigateTo({
+            url: '../createV/createV'
+          })
+        }
+      },
+      fail: function (res) {
+        console.log(res.errMsg);
+      }
+    })
   },
   getUserInfo: function (e) {
     console.log(e)

@@ -1,16 +1,27 @@
 //app.js
 App({
   onLaunch: function () {
+    let that = this;
+    let open_id = null;
     //用户登陆
     wx.login({
       success: function (res) {
         if (res.code) {
-          console.log(res.code);
+          //console.log(res.code);
           //发起网络请求
           wx.request({
-            url: 'http://localhost/wx/index.php',
+            url: 'http://localhost:8080/main',
             data: {
               code: res.code
+            },
+            method:"POST",
+            success:function(res){
+               open_id = res.data.open_id;
+               wx.setStorage({
+                 key: "open_id",
+                 data: open_id
+               })
+               console.log(open_id);
             }
           })
         } else {
@@ -18,6 +29,7 @@ App({
         }
       }
     });
+    this.globalData.open_id = open_id;
     
     // 获取用户信息
     wx.getSetting({
@@ -41,6 +53,8 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    open_id: null,
+    session_key: null,
   }
 })

@@ -8,16 +8,20 @@ Page({
   },
   onLoad: function (option){
     var that=this;
+    var open_id = wx.getStorageSync('open_id');
+    //console.log("ccc:" + open_id);
     that.setData({
       voteId: option.voteId,
     });
     wx.request({
       url: 'http://localhost/wx/votePage.php', //仅为示例，并非真实的接口地址
+      method:"GET",//ggggggggggggggggg
       data: {
         voteId: that.data.voteId,
+        open_id: open_id,
       },
       success: function (res) {
-        console.log(res.data.myVote)
+        //console.log(res.data)
         that.setData({
           voteTitle: res.data.voteTitle,
           voteNum: res.data.voteNum,
@@ -44,15 +48,18 @@ Page({
     });
   },
   voteConfirm: function(e) {
+    var open_id = wx.getStorageSync('open_id');
     wx.request({
       url: 'http://localhost/wx/index.php',
+      method: "POST",
       data: {
         voteId: this.data.voteId,
         voteNum: this.data.voteNum,
-        myVote: this.data.myVote
+        myVote: this.data.myVote,
+        open_id: open_id,
       },
       success: function(res) {
-        console.log("投票成功");
+        //console.log("投票成功");
         wx.showToast({
           title: '成功',
           icon: 'success',

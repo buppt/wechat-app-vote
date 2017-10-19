@@ -38,3 +38,12 @@
 .float-clear{
   clear: both;
 }
+
+.button-footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(3,169,244);
+  color: #fff;
+  font-size: 38rpx;
+}

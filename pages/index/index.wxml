@@ -13,3 +13,4 @@
     </view>
   </view>
 </view>
+<button class='button-footer' bindtap='launch'>发起投票</button>

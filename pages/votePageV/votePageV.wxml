@@ -1,0 +1,13 @@
+<view class='vote-title'>{{voteTitle}}</view>
+<view class='vote-intro' >{{voteIntro}}</view>
+
+<view wx:for="{{voteList}}" wx:key="{{index}}">
+  <view class='vote-li' bindtap="vote" data-id="{{index}}">
+    <view class='vote-index'>{{index+1}}.{{item.name}}</view>
+    <view  class="{{item.myVote==1?'vote-num':'vote-number'}}">{{item.voteNumber}}票</view>
+    <view class='vote-footer'></view>
+  </view>  
+</view>
+
+<button class='button-footer1' bindtap="voteConfirm"  >确定投票</button>
+<button class='button-footer' open-type="share">分享到群里</button>

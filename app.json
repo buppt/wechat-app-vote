@@ -3,7 +3,9 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/create/create",
-    "pages/votePage/votePage"
+    "pages/createV/createV",
+    "pages/votePage/votePage",
+    "pages/votePageV/votePageV"
   ],
   "window": {
     "navigationBarBackgroundColor": "rgb(3,169,244)",
@@ -24,10 +26,6 @@
       {
         "pagePath": "pages/logs/logs",
         "text": "收件箱"
-      },
-      {
-        "pagePath": "pages/create/create",
-        "text": "发起投票"
       }
     ],
     "position": "top"

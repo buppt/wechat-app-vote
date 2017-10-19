@@ -15,7 +15,11 @@ if ($voteId == "11"){
     "voteIntro": "第二个投票",
     "userNumber": "1",
     "voteList":[{
-       "voteNumber": 1,"precent": "100%"}]
+       "voteNumber": 1,"name": "Liming"},
+{
+       "voteNumber": 2,"name": "Liing","myVote":1}
+,{
+       "voteNumber": 1,"name": "ming"}]
     }';
 }
 ?>
