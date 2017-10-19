@@ -7,4 +7,5 @@
 
 ### 项目截图
 ![gif1](img/GIF1.gif)
+<br/>
 ![gif2](img/GIF2.gif)
